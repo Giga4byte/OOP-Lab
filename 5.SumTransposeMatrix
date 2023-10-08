@@ -43,7 +43,7 @@ class SumTransposeMatrix {
             {
                 for (int j=0;j<c1;j++)
                 {
-                   System.out.print (a[j][i]+"  ");
+                   System.out.print (a[i][j]+"  ");
                 }
                 System.out.println();
             }
@@ -63,7 +63,7 @@ class SumTransposeMatrix {
             {
                 for (int j=0;j<c2;j++)
                 {
-                   System.out.print (b[j][i]+"  ");
+                   System.out.print (b[i][j]+"  ");
                 }
                 System.out.println();
             }
