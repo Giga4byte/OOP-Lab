@@ -19,33 +19,33 @@ class Bank {
         this.name = name;
     }
 
-    void depositMoney (double deposit) {
-        accbal = accbal+deposit;
-        System.out.print ("BALANCE: "+accbal);
+    void depositMoney(double deposit) {
+        accbal = accbal + deposit;
+        System.out.print("BALANCE: " + accbal);
         System.out.println();
     }
-    
-    void withdrawMoney (double withdraw) {
-        if (withdraw<0)
-        { System.out.println ("Can't be done"); }
-        else if (accbal-withdraw<0)
-        { System.out.println ("Can't be done"); }
-        else
-        { accbal = accbal - withdraw;
-          System.out.println ("BALANCE: "+accbal); }
+
+    void withdrawMoney(double withdraw) {
+        if (withdraw < 0 || accbal - withdraw < 0) {
+            System.out.println("Can't be done");
+        } else {
+            accbal = accbal - withdraw;
+            System.out.print("BALANCE: " + accbal);
+            System.out.println();
+        }
     }
-    
-    void checkBalance () {
+
+    void checkBalance() {
         System.out.println();
-        System.out.println ("BALANCE: "+accbal);
+        System.out.println("BALANCE: " + accbal);
     }
-    
-    void printAccDetails () {
-	System.out.println();
-        System.out.println ("DETAILS: ");
-        System.out.println("Name: "+name);
-        System.out.println("AccNo: "+accno);
-        System.out.println("AccBalance: "+accbal);
+
+    void printAccDetails() {
+        System.out.println();
+        System.out.println("DETAILS: ");
+        System.out.println("Name: " + name);
+        System.out.println("AccNo: " + accno);
+        System.out.println("AccBalance: " + accbal);
     }
 }
 
@@ -53,10 +53,8 @@ class BankDemo {
     public static void main(String args[]) {
         Scanner s = new Scanner(System.in);
 
-        // Create an object using the default constructor
         Bank b1 = new Bank();
 
-        // Prompt for additional details and actions
         System.out.println("Enter the account number: ");
         b1.accno = s.nextDouble();
         System.out.println("Enter the account balance: ");
@@ -81,11 +79,15 @@ class BankDemo {
         b1.checkBalance();
         b1.printAccDetails();
 
-        // Create another object using a parameterized constructor
-        Bank b2 = new Bank(54321, 1500.0, "Jane Smith");
 
+        Bank b2 = new Bank(123456, 8900.0, "Dona Belly");
+	
+	System.out.println();
+	System.out.println ("DETAILS: ");
+	System.out.println ("Dona Belly\t\t123456\t\t8900.00");
         System.out.println("Withdraw(1) or Deposit(2): ");
         action = s.nextInt();
+
 
         if (action == 1) {
             System.out.println("Withdraw Amount: ");
@@ -101,4 +103,3 @@ class BankDemo {
         b2.printAccDetails();
     }
 }
-
