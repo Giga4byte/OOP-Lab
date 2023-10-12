@@ -19,7 +19,34 @@ class Bank {
         this.name = name;
     }
 
-    // ... rest of the methods as before ...
+    void depositMoney (double deposit) {
+        accbal = accbal+deposit;
+        System.out.print ("BALANCE: "+accbal);
+        System.out.println();
+    }
+    
+    void withdrawMoney (double withdraw) {
+        if (withdraw<0)
+        { System.out.println ("Can't be done"); }
+        else if (accbal-withdraw<0)
+        { System.out.println ("Can't be done"); }
+        else
+        { accbal = accbal - withdraw;
+          System.out.println ("BALANCE: "+accbal); }
+    }
+    
+    void checkBalance () {
+        System.out.println();
+        System.out.println ("BALANCE: "+accbal);
+    }
+    
+    void printAccDetails () {
+	System.out.println();
+        System.out.println ("DETAILS: ");
+        System.out.println("Name: "+name);
+        System.out.println("AccNo: "+accno);
+        System.out.println("AccBalance: "+accbal);
+    }
 }
 
 class BankDemo {
