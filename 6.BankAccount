@@ -1,0 +1,72 @@
+import java.util.Scanner;
+
+class BankAccount {
+    double accno;
+    double accbalance;
+    String name;
+
+    void startacc() {
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter the name: ");
+        name = s.nextLine();
+        System.out.println("Enter the account number: ");
+        accno = s.nextInt();
+        System.out.println("Enter the account balance: ");
+        accbalance = s.nextDouble();
+    }
+
+    void depositcash(double deposit) {
+        accbalance = accbalance + deposit;
+        System.out.println("The balance is " + accbalance);
+    }
+
+    void withdrawcash(double withdraw) {
+        if (accbalance == 0) {
+            System.out.println("Withdrawal not possible");
+        } else {
+            accbalance = accbalance - withdraw;
+            System.out.println("The balance is " + accbalance);
+        }
+    }
+
+    void printbalance() {
+        System.out.println("The balance is " + accbalance);
+    }
+
+    void printdetails() {
+        System.out.println();
+        System.out.println("Name: " + name);
+        System.out.println("Acc No: " + accno);
+        System.out.println("Acc Balance: " + accbalance);
+    }
+}
+
+class BankDemo {
+    public static void main(String args[]) {
+        Scanner s = new Scanner(System.in);
+        BankAccount b = new BankAccount();
+        System.out.println("Enter the name: ");
+        b.name = s.nextLine();
+        System.out.println("Enter the account number: ");
+        b.accno = s.nextDouble();
+        System.out.println("Enter the account balance: ");
+        b.accbalance = s.nextDouble();
+        s.nextLine(); // Consume the newline character left in the buffer
+
+        System.out.println("Withdraw/Add (1/2): ");
+        int action = s.nextInt(); // Read the action as an integer
+
+        if (action == 1) {
+            System.out.println("Money to withdraw: ");
+            double withdraw = s.nextDouble();
+            b.withdrawcash(withdraw);
+        } else if (action == 2) {
+            System.out.println("Money to deposit: ");
+            double deposit = s.nextDouble();
+            b.depositcash(deposit);
+        }
+
+        b.printbalance();
+        b.printdetails();
+    }
+}
