@@ -47,7 +47,7 @@ class Interns extends Employee {
 
     Interns(String name, int id, String college) {
         super(name, id);
-        this.college = college;
+        college = college;
     }
 
     void displayDetails() {
