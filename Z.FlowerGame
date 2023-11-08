@@ -6,11 +6,11 @@ class FlowerGame {
         System.out.println ("Choose a color: ");
         System.out.println ("MENU: GREEN, YELLOW, BLUE, RED");
         String s = scan.nextLine ();
-        for (int i=0; i<s.length; i++)
+        for (int i=0; i<s.length(); i++)
         {
             if (i%2 == 0)
             {   System.out.println ("It had even number of letters");
-                System.out.println ("INNER MENU: 1, 2, 5, 6")
+                System.out.println ("INNER MENU: 1, 2, 5, 6");
                 int x = scan.nextInt ();
                 if (x == 1)
                 {
@@ -21,14 +21,15 @@ class FlowerGame {
                         System.out.println ("SUB-INNER MENU: 3, 4, 7, 8");
                         int y = scan.nextInt ();
                         if (y == 3)
-                        {System.out.println ("You owe Giribala a treat.");}
+                        {System.out.println ("You owe Giribala a treat."); break;}
                         else if (y == 4)
-                        {System.out.println ("Ask ma'am a doubt.");}
+                        {System.out.println ("Ask ma'am a doubt.");  break;}
                         else if (y == 7)
-                        {System.out.println ("Say you're gay to the person on your left.");}
+                        {System.out.println ("Say you're gay to the person on your left.");  break;}
                         else if (y == 8)
-                        {System.out.println ("Sing a random song you liked in 10th.");}
+                        {System.out.println ("Sing a random song you liked in 10th.");  break;}
                     }
+                    break;
                 }
                 else if (x == 2)
                 {
@@ -39,14 +40,15 @@ class FlowerGame {
                         System.out.println ("SUB-INNER MENU: 3, 4, 7, 8");
                         int y = scan.nextInt ();
                         if (y == 3)
-                        {System.out.println ("You owe Giribala a treat.");}
+                        {System.out.println ("You owe Giribala a treat.");  break;}
                         else if (y == 4)
-                        {System.out.println ("Ask ma'am a doubt.");}
+                        {System.out.println ("Ask ma'am a doubt.");  break;}
                         else if (y == 7)
-                        {System.out.println ("Say you're gay to the person on your left.");}
+                        {System.out.println ("Say you're gay to the person on your left.");  break;}
                         else if (y == 8)
-                        {System.out.println ("Sing a random song you liked in 10th.");}
+                        {System.out.println ("Sing a random song you liked in 10th.");  break;}
                     }
+                    break;
                 }
                 else if (x == 5)
                 {
@@ -57,14 +59,15 @@ class FlowerGame {
                         System.out.println ("SUB-INNER MENU: 1, 2, 5, 6");
                         int y = scan.nextInt ();
                         if (y == 1)
-                        {System.out.println ("Explain your favourite joke in the shittest manner.");}
+                        {System.out.println ("Explain your favourite joke in the shittest manner.");  break;}
                         else if (y == 2)
-                        {System.out.println ("Give the person sitting opposite to you a flying kiss.");}
+                        {System.out.println ("Give the person sitting opposite to you a flying kiss.");  break;}
                         else if (y == 5)
-                        {System.out.println ("Reveal a secret of yours.");}
+                        {System.out.println ("Reveal a secret of yours.");  break;}
                         else if (y == 6)
-                        {System.out.println ("Reveal the last 5 searches on your phone.");}
+                        {System.out.println ("Reveal the last 5 searches on your phone.");  break;}
                     }
+                    break;
                 }
                 else if (x == 6)
                 {
@@ -75,14 +78,15 @@ class FlowerGame {
                         System.out.println ("SUB-INNER MENU: 3, 4, 7, 8");
                         int y = scan.nextInt ();
                         if (y == 3)
-                        {System.out.println ("You owe Giribala a treat.");}
+                        {System.out.println ("You owe Giribala a treat.");  break;}
                         else if (y == 4)
-                        {System.out.println ("Ask ma'am a doubt.");}
+                        {System.out.println ("Ask ma'am a doubt.");  break;}
                         else if (y == 7)
-                        {System.out.println ("Say you're gay to the person on your left.");}
+                        {System.out.println ("Say you're gay to the person on your left.");  break;}
                         else if (y == 8)
-                        {System.out.println ("Sing a random song you liked in 10th.");}
+                        {System.out.println ("Sing a random song you liked in 10th.");  break;}
                     }
+                    break;
                 }    
             }
         }
